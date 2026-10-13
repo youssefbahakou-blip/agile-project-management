@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(77, 255, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+main > nav{
+    border-right: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: white;
+}
+
+main > nav > button,main .methodes-buttons button{
+    padding: 12px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    color: #222;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+main .methodes-buttons button{
+    box-shadow: 0 0 5px 2px rgba(77, 255, 0, 0.4);
+
+}
+main > nav > button:hover, 
+main .methodes-buttons button:hover,
+.understand-btn:hover {
+    background-color: #4dff00;
+    transform: translateX(3px);
+}
+
+main section{
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    flex-direction: column;
+    text-align: center;
+}
+main #section1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main section:nth-of-type(n+2),
+main #section2 #contentV,
+main #section2 #contentY,
+main #section3 #contenttCanban,
+main #section3 #contenttXP,
+main #section5 #contentttPERT,
+main #section5 #contentttRépartition{
+    display: none;
+}
+main #section2 , main #section3 ,  main #section5 {
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+
+}
+main #section2 .methodes-buttons , main #section3 .methodes-buttons ,  main #section5 .methodes-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px ;
+}
+main  div img {
+    width: 100%;
+    max-width: 600px;
+    height: 65vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.understand-btn {
+    display: inline-block;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px 2px rgba(77, 255, 0, 0.4);
+
+}
+
+
+

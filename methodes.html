@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="methodes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="aceuille.html">Accueil</a>
+        <a href="conceptDeGestion.html">Concepts</a>
+        <a href="methodes.html">Méthodes</a>
+    </header>
+    <main>
+        <nav>
+            <button id="button1">Accueil</button>
+            <button id="button2">Méthode prévisible</button>
+            <button id="button3">Méthode imprévisible</button>
+            <button id="button4">Les éléments d’un projet Agile</button>
+            <button id="button5">Outils de planification et de répartition des tâches</button>
+        </nav>
+        <section id="section1">
+            <img src="images/360_F_56550771_FqX2Sn04lQhxY93VwqHNNan5LfSYlOfq.jpg" alt="">
+        </section>
+
+        <section id="section2">
+            <div class="methodes-buttons">
+                <button id="btnCascade">
+                    Méthode en cascade
+                </button>
+
+                <button id="btnV">
+                    Méthode en V
+                </button>
+
+                <button id="btnY">
+                    Cycle en Y
+                </button>
+            </div>
+            <div id="contentCascade" class="content">
+                <h1>
+                    Méthode en cascade
+                </h1>
+                <img src="images/cascade.jpg" alt="Méthode en cascade">
+                <a href="https://youtu.be/VJRDhX6UyEM?t=37"
+                   target="_blank"
+                   class="understand-btn">
+                    Pour comprendre la méthode en cascade, cliquez ici
+                </a>
+            </div>
+            <div id="contentV" class="content">
+                <h1>Méthode en V</h1>
+                <img src="images/Methode-Cycle-en-V.avif"
+                     alt="Méthode en V">
+                <a href="https://youtu.be/VJRDhX6UyEM?t=222"
+                   target="_blank"
+                   class="understand-btn">
+                    Pour comprendre la méthode en V, cliquez ici
+                </a>
+            </div>
+            <div id="contentY" class="content">
+                <h1>Cycle en Y</h1>
+                <img src="images/cycleeny.png"
+                     alt="Cycle en Y">
+                <a href="https://youtu.be/VJRDhX6UyEM?t=145"
+                   target="_blank"
+                   class="understand-btn">
+                    Pour comprendre le cycle en Y, cliquez ici
+                </a>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="methodes-buttons">
+                <button id="btnnScrum">
+                    Scrum
+                </button>
+                <button id="btnnCanban">
+                    Kanban
+                </button>
+                <button id="btnnXP">
+                    Extreme Programming (XP)
+                </button>
+            </div>
+            <div id="contenttScrum" class="contentt">
+                <img src="images/scrum.webp"
+                     alt="Méthode Scrum">
+                <a href="https://youtu.be/VJRDhX6UyEM?t=222"
+                   target="_blank"
+                   class="understand-btn">
+                    Pour comprendre la méthode Scrum, cliquez ici
+                </a>
+            </div>
+            <div id="contenttCanban" class="contentt">
+                    <h1>
+                        Kanban
+                    </h1>
+                    <img src="images/canban.jpg"
+                    alt="Méthode Kanban">
+                    <a href="https://youtu.be/VJRDhX6UyEM?t=574"
+                    target="_blank"
+                    class="understand-btn">
+                    Pour comprendre la méthode Kanban, cliquez ici
+                </a>
+            </div>
+            <div id="contenttXP" class="contentt">
+                <img src="images/xp.jpg"
+                alt="Extreme Programming">
+                <a href="https://youtu.be/Y09iSgTfq5s?t=3"
+                target="_blank"
+                class="understand-btn">
+                Pour comprendre la méthode Extreme Programming (XP), cliquez ici
+                </a>
+            </div>
+        </section>
+        <section id="section4">
+            <img src="images/Screenshot 2026-10-01 105016.png" alt="">
+        </section>
+        <section id="section5">
+            <div class="methodes-buttons">
+                <button id="btnnnGantt">
+                    Diagramme de Gantt
+                </button>
+                <button id="btnnnPERT">
+                    Diagramme de PERT
+                </button>
+                <button id="btnnnRépartition">
+                    Répartition des tâches
+                </button>
+            </div>
+            <div id="contentttGantt" class="contenttt">
+                <img src="images/diagramme de gante.png"
+                     alt="Diagramme de Gantt">
+                <a href=""
+                   target="_blank"
+                   class="understand-btn">
+                    Pour comprendre le diagramme de Gantt, cliquez ici
+                </a>
+            </div>
+            <div id="contentttPERT" class="contenttt">
+                    <img src="images/diagramme de pert.webp"
+                    alt="Diagramme de PERT">
+                    <a href=""
+                    target="_blank"
+                    class="understand-btn">
+                    Pour comprendre le diagramme de PERT, cliquez ici
+                </a>
+            </div>
+            <div id="contentttRépartition" class="contenttt">
+                <img src="images/"
+                alt="Répartition des tâches">
+                <a href=""
+                target="_blank"
+                class="understand-btn">
+                Pour comprendre la Répartition des tâches, cliquez ici
+                </a>
+            </div>
+                
+        </section>
+    </main>
+
+    <script>
+
+        // NAV BUTTONS
+        let buttons = document.querySelectorAll(
+            "main > nav > button"
+        );
+
+        buttons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                let number = button.id.replace("button", "");
+
+                let newsection =
+                    document.getElementById("section" + number);
+
+                document.querySelectorAll("section").forEach(section => {
+                    section.style.display = "none";
+                });
+
+                newsection.style.display = "flex";
+
+            });
+
+        });
+
+        // MÉTHODES PRÉVISIBLES
+        let buttons2 = document.querySelectorAll(
+            "main > #section2 > .methodes-buttons > button"
+        );
+
+        buttons2.forEach((buttonn) => {
+
+            buttonn.addEventListener("click", () => {
+
+                let l = buttonn.id.replace("btn", "");
+
+                let content =
+                    document.getElementById("content" + l);
+
+                document.querySelectorAll(".content").forEach((contentt) => {
+                    contentt.style.display = "none";
+                });
+
+                content.style.display = "block";
+
+            });
+
+        });
+
+        // MÉTHODES IMPRÉVISIBLES
+        let buttons3 = document.querySelectorAll(
+            "main > #section3 > .methodes-buttons > button"
+        );
+
+        buttons3.forEach((buttonnn) => {
+
+            buttonnn.addEventListener("click", () => {
+
+                let l = buttonnn.id.replace("btnn", "");
+
+                let contentt =
+                    document.getElementById("contentt" + l);
+
+                document.querySelectorAll(".contentt").forEach((contenttt) => {
+                    contenttt.style.display = "none";
+                });
+
+                contentt.style.display = "block";
+
+            });
+
+        });
+        // Outils de planification et de répartition des tâches
+        let buttons4 = document.querySelectorAll(
+            "main > #section5 > .methodes-buttons > button"
+        );
+
+        buttons4.forEach((buttonnnn) => {
+
+            buttonnnn.addEventListener("click", () => {
+
+                let l = buttonnnn.id.replace("btnnn", "");
+
+                let contenttt =
+                    document.getElementById("contenttt" + l);
+
+                document.querySelectorAll(".contenttt").forEach((contentttt) => {
+                    contentttt.style.display = "none";
+                });
+
+                contenttt.style.display = "block";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
